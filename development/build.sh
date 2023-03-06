@@ -1,3 +1,3 @@
 #!/bin/sh
 
-(cd armadillo-rserver_caravan-wasp; make)
+(cd development/armadillo-rserver_caravan-wasp; make)
