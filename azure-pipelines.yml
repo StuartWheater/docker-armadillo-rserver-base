@@ -13,7 +13,7 @@ jobs:
     - task: Bash@3
       displayName: Check, build and release images
       inputs:
-        filePath: .azure/build_docker.bash
+        filePath: development/build.sh
       env:
         DOCKERHUB_AUTH: $(DOCKERHUB_AUTH)
         GITHUB_TOKEN: $(GITHUB_TOKEN)
