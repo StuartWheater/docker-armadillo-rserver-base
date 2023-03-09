@@ -10,6 +10,14 @@ jobs:
     pool:
       vmImage: 'ubuntu-latest'
     steps:
+      #####################################################################################
+      # The Azure VMs have 4 CPUs, so configure R to use both when compile/install packages.
+      # If previous steps have failed then don't run.
+    - bash: |
+        echo "options(Ncpus=4)" >> ~/.Rprofile
+        displayName: 'Tweak local R env using .Rprofile'
+      condition: succeeded()
+
     - task: Bash@3
       displayName: Check, build and release images
       inputs:
