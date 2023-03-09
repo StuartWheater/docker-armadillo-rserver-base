@@ -6,7 +6,7 @@ pr:
 
 jobs:
   - job: DockerPipeline
-    timeoutInMinutes: 120
+    timeoutInMinutes: 240
     pool:
       vmImage: 'ubuntu-latest'
     steps:
